@@ -10,7 +10,6 @@ import logging
 from StringIO import StringIO
 from BeautifulSoup import BeautifulSoup
 
-
 def spider(url, args, flag_get_new_link):
 
     thread_name = threading.current_thread().getName()
@@ -23,7 +22,6 @@ def spider(url, args, flag_get_new_link):
         for link in soup.findAll('a', attrs={'href': re.compile("^http://")}):
             href = link.get('href')
             new_link.append(href)
-
         return new_link
 
     # 获取页面
