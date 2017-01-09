@@ -17,5 +17,4 @@ def get_args():
     parser.add_argument('--testself', action="store_true", dest="testself", default="", help="程序自测自测")
     args = parser.parse_args()
     args.key = args.key.decode("utf-8")
-
     return args
